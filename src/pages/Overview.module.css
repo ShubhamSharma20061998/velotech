@@ -1,0 +1,9 @@
+.row {
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+.card {
+  border: transparent;
+  box-shadow: 0px 0px 5px 0px #b2b2b2;
+}
