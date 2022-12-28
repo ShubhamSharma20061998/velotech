@@ -19,6 +19,9 @@ video {
 .nav_items a {
   color: #fff;
 }
+.nav_items a:hover {
+  color: grey;
+}
 .banner_content {
   height: 60vh;
   text-align: center;

@@ -2,13 +2,14 @@ import React from "react";
 import styles from "./Header.module.css";
 import video from "../assets/banner_video.mp4";
 import { AiOutlineMenu } from "react-icons/ai";
+
 const Header = () => {
   return (
-    <main className={`container-fluid ${styles.header_container}`}>
+    <main className={styles.header_container}>
       <nav className="navbar navbar-expand-lg">
         <div className="container">
           <a className="navbar-brand" href="#">
-            Navbar
+            LOGO
           </a>
           <button
             className="navbar-toggler"
@@ -26,16 +27,16 @@ const Header = () => {
             id="navbarNavAltMarkup"
           >
             <div className={`navbar-nav ${styles.nav_items}`}>
-              <a className="nav-link" aria-current="page" href="#">
+              <a className="nav-link" aria-current="page" href="#overview">
                 OVERVIEW
               </a>
-              <a className="nav-link" aria-current="page" href="#">
+              <a className="nav-link" aria-current="page" href="#products">
                 PRODUCTS
               </a>
-              <a className="nav-link" aria-current="page" href="#">
+              <a className="nav-link" aria-current="page" href="#upcomings">
                 UPCOMINGS
               </a>
-              <a className="nav-link " aria-current="page" href="#">
+              <a className="nav-link " aria-current="page" href="#contact_us">
                 CONTACT US
               </a>
             </div>
