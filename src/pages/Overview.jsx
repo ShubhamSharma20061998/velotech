@@ -1,83 +1,79 @@
 import React from "react";
 import styles from "./Overview.module.css";
-import Card from "react-bootstrap/Card";
 import { MdPhone, MdEmail } from "react-icons/md";
 import { HiGlobeAlt } from "react-icons/hi";
 import { Tooltip as ReactTooltip } from "react-tooltip";
 import "react-tooltip/dist/react-tooltip.css";
 import { Parallax } from "react-parallax";
+import AboutUs from "./AboutUs";
+import FanAxile from "./FanAxile";
+import ProdsUnderDev from "./ProdsUnderDev";
+import RND from "./RND";
+import { ImLeaf } from "react-icons/im";
 
 const Overview = () => {
   const vision = [
-    "Our core vision lies in providing the latest technology at affordable prices. As the already existing products with the same technology in the market are expensive and complex.We are solving the problem and coming with the solution of cost effectiveness and better efficiency at same with less complexity. Also, the power backup feature that we are offering is not being given by any of our competitor, as a result they are unable to compete with our cost.",
+    "Our vision is to revolutionize the way people consume energy by offering a range of highly efficient power devices that significantly reduce energy waste and costs. Our products will cater to both residential and commercial consumers, and will range from smart plugs and outlets to solar panels and electric vehicle chargers.",
   ];
   const mission = [
-    "With our first stage product, we are catering lower and middle class who are suffering from frequent power failure and cannot afford an inverter. We are aiming for selling 15000 pieces of fan in first year.",
+    "Our mission is to become the go-to brand for those who prioritize sustainability and energy conservation. We believe that by creating innovative and reliable power solutions, we can make a positive impact on both the environment and people's wallets.",
+  ];
+  const overviewDescription = [
+    "We are committed to using cutting-edge technology and design to create products that are not only efficient, but also easy to use and aesthetically pleasing. Our team of passionate and dedicated professionals will work tirelessly to ensure that our products exceed the expectations of our customers and make a tangible difference in the world.",
+  ];
+  const overviewDescription_2 = [
+    "Ultimately, we aim to create a future where energy conservation is the norm, and where our products play a key role in building a more sustainable and equitable society.",
   ];
   return (
     <main>
       <section className={`${styles.company_overview} container`} id="overview">
         <h2>COMPANY OVERVIEW</h2>
         <div className={`row ${styles.company_overview_row}`}>
-          <div className={`card col-11 col-md-4 ${styles.card}`}>
+          <div
+            className={`card col-11 col-md-4 ${styles.card} ${styles.vision}`}
+          >
             <div className="card-body">
               <h4 className="card-title">OUR VISION</h4>
               <p className="card-text">{vision}</p>
             </div>
           </div>
-          <div className={`card col-11 col-md-4 ${styles.card}`}>
+          <div
+            className={`card col-11 col-md-4 ${styles.card} ${styles.mission}`}
+          >
             <div className="card-body">
               <h4 className="card-title">OUR MISSION</h4>
               <p className="card-text">{mission}</p>
             </div>
           </div>
+          <p>{overviewDescription}</p>
+          <p>{overviewDescription_2}</p>
         </div>
       </section>
-      <section className="our_products container" id="products">
-        <h2>OUR PRODUCTS</h2>
-        <h4>STACK CORE AXILE FLUX MOTOR</h4>
+
+      <section className="aboutus container" id="about_us">
+        <h2>ABOUT US</h2>
+        <AboutUs />
       </section>
-      <section className="upcomings container" id="upcomings">
-        <h2>FUTURE TECH UNDER DEVELOPEMENT</h2>
-        <h4>AXIAL MOTOR FOR E-MOBILITY</h4>
-      </section>
-      <section className="axialMotorFan container">
-        <h2>AXIAL FLUX MOTOR FAN WITH POWER BACKUP UPTO 4HOURS</h2>
+      <section className={`container ${styles.axialMotorFan}`} id="products">
+        <h2>
+          OUR PRODUCTS
+          <ImLeaf className={styles.leaf_icon} />
+        </h2>
+        <h3>AXIAL FLUX MOTOR FAN WITH POWER BACKUP UPTO 4HOURS</h3>
         <h4>
           Technology stacking core axial flux motor usp. Consume extremly low
           power input 12 to 18 watt with in build battery backup upto 3 to 4
           hours
         </h4>
+        <FanAxile />
       </section>
-      <section className="productsUnderDevelopement container">
-        <h2>PRODUCTS UNDER DEVELOPEMENT</h2>
-        <h4>AC 250 WATT WILL GIVE YOU POWER UPTO 2 HOURS AFTER POWER CUT</h4>
-        <div className="row">
-          <div
-            className={`col-9 col-md-4 ${styles.productsUnderDevelopement_cards}`}
-          >
-            <Card style={{ width: "18rem" }}>
-              <Card.Body>
-                <Card.Title>COOLER 60 WATT</Card.Title>
-              </Card.Body>
-            </Card>
-          </div>
-          <div className="col-9 col-md-4">
-            <p>
-              Power backup upto 5 hours functions at 18-20 watt. Higher backup
-              time on inverter system remote control upto 75% energy saving.
-            </p>
-          </div>
-          <div
-            className={`col-9 col-md-4 ${styles.productsUnderDevelopement_cards}`}
-          >
-            <Card style={{ width: "18rem" }}>
-              <Card.Body>
-                <Card.Title>PUMP 300 WATT</Card.Title>
-              </Card.Body>
-            </Card>
-          </div>
-        </div>
+      <section className={`${styles.productsUnderDevelopement} container`}>
+        <h3>PRODUCTS UNDER DEVELOPEMENT</h3>
+        <ProdsUnderDev />
+      </section>
+      <section className="upcomings container" id="upcomings">
+        <h3>FUTURE TECH UNDER RESEARCH AND DEVELOPEMENT</h3>
+        <RND />
       </section>
       <Parallax
         blur={5}
