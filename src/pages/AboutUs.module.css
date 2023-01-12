@@ -1,0 +1,14 @@
+.videoLink {
+  padding: 0.5rem 3rem;
+  text-decoration: none;
+  background-color: var(--bs-link-color);
+  color: #fff;
+  border-radius: 0.8rem;
+  width: 13rem !important;
+  height: 2.5rem !important;
+  text-align: center;
+}
+.About_row {
+  justify-content: center;
+  align-items: center;
+}

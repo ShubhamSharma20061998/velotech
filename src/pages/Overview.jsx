@@ -10,6 +10,8 @@ import FanAxile from "./FanAxile";
 import ProdsUnderDev from "./ProdsUnderDev";
 import RND from "./RND";
 import { ImLeaf } from "react-icons/im";
+import visionImg from "../assets/vision.jpg";
+import missionImg from "../assets/mission.jpg";
 
 const Overview = () => {
   const vision = [
@@ -28,21 +30,39 @@ const Overview = () => {
     <main>
       <section className={`${styles.company_overview} container`} id="overview">
         <h2>COMPANY OVERVIEW</h2>
-        <div className={`row ${styles.company_overview_row}`}>
-          <div
-            className={`card col-11 col-md-4 ${styles.card} ${styles.vision}`}
-          >
-            <div className="card-body">
-              <h4 className="card-title">OUR VISION</h4>
-              <p className="card-text">{vision}</p>
+        <div className={styles.company_overview_row}>
+          <div className="row">
+            <div className="col-11 col-md-4">
+              <img
+                src={visionImg}
+                alt="vision"
+                className={styles.visionImage}
+              />
+            </div>
+            <div
+              className={`card col-11 col-md-4 ${styles.card} ${styles.vision}`}
+            >
+              <div className="card-body">
+                <h4 className="card-title">OUR VISION</h4>
+                <p className="card-text">{vision}</p>
+              </div>
             </div>
           </div>
-          <div
-            className={`card col-11 col-md-4 ${styles.card} ${styles.mission}`}
-          >
-            <div className="card-body">
-              <h4 className="card-title">OUR MISSION</h4>
-              <p className="card-text">{mission}</p>
+          <div className="row">
+            <div
+              className={`card col-11 col-md-4 ${styles.card} ${styles.mission}`}
+            >
+              <div className="card-body">
+                <h4 className="card-title">OUR MISSION</h4>
+                <p className="card-text">{mission}</p>
+              </div>
+            </div>
+            <div className="col-11 col-md-4">
+              <img
+                src={missionImg}
+                alt="mission"
+                className={styles.missionImg}
+              />
             </div>
           </div>
           <p>{overviewDescription}</p>
@@ -50,30 +70,34 @@ const Overview = () => {
         </div>
       </section>
 
-      <section className="aboutus container" id="about_us">
-        <h2>ABOUT US</h2>
-        <AboutUs />
+      <section className={styles.aboutus} id="about_us">
+        <div className="container">
+          <h2>ABOUT US</h2>
+          <AboutUs />
+        </div>
       </section>
-      <section className={`container ${styles.axialMotorFan}`} id="products">
+      <section className={styles.axialMotorFan} id="products">
         <h2>
           OUR PRODUCTS
           <ImLeaf className={styles.leaf_icon} />
         </h2>
-        <h3>AXIAL FLUX MOTOR FAN WITH POWER BACKUP UPTO 4HOURS</h3>
-        <h4>
-          Technology stacking core axial flux motor usp. Consume extremly low
-          power input 12 to 18 watt with in build battery backup upto 3 to 4
-          hours
-        </h4>
-        <FanAxile />
-      </section>
-      <section className={`${styles.productsUnderDevelopement} container`}>
-        <h3>PRODUCTS UNDER DEVELOPEMENT</h3>
-        <ProdsUnderDev />
-      </section>
-      <section className="upcomings container" id="upcomings">
-        <h3>FUTURE TECH UNDER RESEARCH AND DEVELOPEMENT</h3>
-        <RND />
+        <div className={`container ${styles.FanAxial}`}>
+          <h3>AXIAL FLUX MOTOR FAN WITH POWER BACKUP UPTO 4HOURS</h3>
+          <h4>
+            Technology stacking core axial flux motor usp. Consume extremly low
+            power input 12 to 18 watt with in build battery backup upto 3 to 4
+            hours
+          </h4>
+          <FanAxile />
+        </div>
+        <div className={`${styles.productsUnderDevelopement} container`}>
+          <h3>PRODUCTS UNDER DEVELOPEMENT</h3>
+          <ProdsUnderDev />
+        </div>
+        <div className={`${styles.upcomings} container`} id="upcomings">
+          <h3>FUTURE TECH UNDER RESEARCH AND DEVELOPEMENT</h3>
+          <RND />
+        </div>
       </section>
       <Parallax
         blur={5}

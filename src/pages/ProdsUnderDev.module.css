@@ -1,34 +1,18 @@
-.productsUnderDevelopement_cards {
+.images {
+  width: 100%;
+}
+.image_container {
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  text-align: center;
 }
-.card_row {
-  justify-content: center;
+.prodsRow {
   align-items: center;
+  justify-content: center;
+  border-radius: 2rem;
+  box-shadow: 0px 0px 8px 0px #ababab;
 }
-.card {
-  border: transparent;
-  box-shadow: 0px 0px 5px 0px #b2b2b2;
-  min-height: 39.5rem;
-}
-.aircondition {
-  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
-    url("https://images.pexels.com/photos/2539462/pexels-photo-2539462.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
-}
-.cooler {
-  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
-    url("https://static.toiimg.com/photo/msid-82323451/82323451.jpg");
-}
-.cooler,
-.aircondition {
-  background-position: center;
-  background-size: cover;
-  color: #ffffff;
-}
-@media screen and (max-width: 768px) {
-  .card_row {
-    gap: 1rem;
-  }
+.h4 {
+  margin: 1rem 0 0.5rem 0;
 }

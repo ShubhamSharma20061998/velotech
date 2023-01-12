@@ -1,6 +1,6 @@
 import React from "react";
-import video from "../assets/charging.mp4";
 import styles from "./FanAxial.module.css";
+import fan from "../assets/fan.gif";
 
 const FanAxile = () => {
   const textDescription = [
@@ -34,7 +34,7 @@ const FanAxile = () => {
           })}
         </div>
         <div className="col-auto col-md-2">
-          <video src={video} autoPlay loop muted className={styles.video} />
+          <img src={fan} alt="fan" className={styles.fan_image} />
         </div>
       </div>
     </>

@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Prata&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Unna&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -14,4 +16,17 @@ p {
 }
 section {
   padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Prata", serif;
+}
+p {
+  font-family: "Unna", serif;
+  font-size: 17px;
 }

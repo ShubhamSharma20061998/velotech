@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "./ProdsUnderDev.module.css";
-import { Card } from "react-bootstrap";
-
+import AC from "../assets/ac.gif";
+import cooler from "../assets/cooler.png";
 const ProdsUnderDev = () => {
   const ACContent = [
     {
@@ -40,38 +40,32 @@ const ProdsUnderDev = () => {
     },
   ];
   return (
-    <>
-      <div className={`row ${styles.card_row}`}>
-        <div
-          className={`col-11 col-md-5 ${styles.productsUnderDevelopement_cards}`}
-        >
-          <Card className={`${styles.card} ${styles.aircondition}`}>
-            <Card.Body>
-              <Card.Title>
-                Velotech's 250 watt AC with 2 hour power backup!
-              </Card.Title>
-              {ACContent?.map(({ paragraph }) => {
-                return <p key={paragraph}>{paragraph}</p>;
-              })}
-            </Card.Body>
-          </Card>
+    <div className={styles.ProdsUnderDev_container}>
+      <h4>Velotech's 250 watt AC with 2 hour power backup!</h4>
+      <div className={`row ${styles.prodsRow}`}>
+        <div className={`col-auto col-md-2 ${styles.image_container}`}>
+          <img src={AC} alt="AC" className={styles.images} />
         </div>
-        <div
-          className={`col-11 col-md-5 ${styles.productsUnderDevelopement_cards}`}
-        >
-          <Card className={`${styles.card} ${styles.cooler}`}>
-            <Card.Body>
-              <Card.Title>
-                Velotech's 60 watt cooler with a power backup of 4 hours!
-              </Card.Title>
-              {Cooler?.map(({ paragraph }) => {
-                return <p key={paragraph}>{paragraph}</p>;
-              })}
-            </Card.Body>
-          </Card>
+        <div className="col-11 col-md-10">
+          {ACContent?.map(({ paragraph }) => {
+            return <p key={paragraph}>{paragraph}</p>;
+          })}
         </div>
       </div>
-    </>
+      <h4 className={styles.h4}>
+        Velotech's 60 watt cooler with a power backup of 4 hours!
+      </h4>
+      <div className={`row ${styles.prodsRow}`}>
+        <div className="col-11 col-md-10">
+          {Cooler?.map(({ paragraph }) => {
+            return <p key={paragraph}>{paragraph}</p>;
+          })}
+        </div>
+        <div className={`col-auto col-md-2 ${styles.image_container}`}>
+          <img src={cooler} alt="Cooler" className={styles.images} />
+        </div>
+      </div>
+    </div>
   );
 };
 

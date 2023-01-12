@@ -1,5 +1,6 @@
 import React from "react";
-
+import veloVideo from "../assets/t1.mp4";
+import styles from "./AboutUs.module.css";
 const AboutUs = () => {
   const textContent = [
     {
@@ -20,6 +21,11 @@ const AboutUs = () => {
       {textContent?.map(({ paragraph }) => {
         return <p key={paragraph}>{paragraph}</p>;
       })}
+      <div className={`row ${styles.About_row}`}>
+        <a href={veloVideo} target="_blank" className={styles.videoLink}>
+          Watch Video
+        </a>
+      </div>
     </>
   );
 };

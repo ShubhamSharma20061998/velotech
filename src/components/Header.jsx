@@ -1,8 +1,7 @@
 import React from "react";
 import styles from "./Header.module.css";
-import video from "../assets/t1.mp4";
-import { AiOutlineMenu } from "react-icons/ai";
-import logo from "../assets/velotech_logo/cool velo.png";
+import video from "../assets/banner_video.mp4";
+import logo from "../assets/velotech_logo/velo.jpg";
 import { Container, Nav, Navbar } from "react-bootstrap";
 
 const Header = () => {
@@ -16,7 +15,7 @@ const Header = () => {
   return (
     <main className={styles.header_container}>
       <nav className="navbar navbar-expand-lg">
-        <div className="container">
+        <div className={`container ${styles.navbar_container}`}>
           <a className="navbar-brand" href="#">
             <img src={logo} alt="logo" />
           </a>

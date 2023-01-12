@@ -1,4 +1,6 @@
 import React from "react";
+import ev_image from "../assets/ev.jpg";
+import styles from "./RND.module.css";
 
 const RND = () => {
   const textContent = [
@@ -25,9 +27,16 @@ const RND = () => {
   ];
   return (
     <>
-      {textContent?.map(({ paragraph }) => {
-        return <p key={paragraph}>{paragraph}</p>;
-      })}
+      <div className={`row ${styles.RndRow}`}>
+        <div className={`col-auto col-md-2 ${styles.image_container}`}>
+          <img src={ev_image} alt="ev" className={styles.ev_image} />
+        </div>
+        <div className="col-11 col-md-10">
+          {textContent?.map(({ paragraph }) => {
+            return <p key={paragraph}>{paragraph}</p>;
+          })}
+        </div>
+      </div>
     </>
   );
 };
