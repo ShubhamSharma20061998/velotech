@@ -1,9 +1,3 @@
-.nav_items {
-  align-items: flex-end;
-}
-.navlist_container {
-  justify-content: flex-end;
-}
 .video {
   width: 100%;
   height: 80vh;
@@ -16,12 +10,6 @@
   padding: 0;
   height: 80vh;
 }
-.nav_items a {
-  color: #fff;
-}
-.nav_items a:hover {
-  color: limegreen;
-}
 .banner_content {
   height: 60vh;
   text-align: center;
@@ -33,18 +21,20 @@
 }
 .header_container button {
   border: 1px solid #fff;
-}
-.menu_icon {
-  fill: #fff;
+  background-color: #fff;
 }
 .header_container img {
   width: 8rem;
   height: 2.5rem;
 }
-.navbar_container {
-  border: transparent;
-  border-radius: 1rem;
-  padding: 1rem;
-  background-color: #8d8d8d;
-  box-shadow: 0px 0px 5px 0px #b2b2b2;
+.nav_navigator_container {
+  align-items: center;
+  justify-content: flex-end;
+}
+.nav_navigators a {
+  color: #fff;
+}
+.nav_navigators {
+  align-items: flex-end;
+  justify-content: center;
 }

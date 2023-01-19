@@ -1,6 +1,7 @@
 import React from "react";
 import styles from "./FanAxial.module.css";
 import fan from "../assets/fan.gif";
+import Accordion from "react-bootstrap/Accordion";
 
 const FanAxile = () => {
   const textDescription = [
@@ -29,9 +30,16 @@ const FanAxile = () => {
     <>
       <div className={`row ${styles.fanAxile_row}`}>
         <div className="col-11 col-md-10">
-          {textDescription?.map(({ paragraph }) => {
-            return <p key={paragraph}>{paragraph}</p>;
-          })}
+          <Accordion>
+            <Accordion.Item eventKey="0">
+              <Accordion.Header>Know more...</Accordion.Header>
+              <Accordion.Body>
+                {textDescription?.map(({ paragraph }) => {
+                  return <p key={paragraph}>{paragraph}</p>;
+                })}
+              </Accordion.Body>
+            </Accordion.Item>
+          </Accordion>
         </div>
         <div className="col-auto col-md-2">
           <img src={fan} alt="fan" className={styles.fan_image} />

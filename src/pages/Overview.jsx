@@ -12,6 +12,7 @@ import RND from "./RND";
 import { ImLeaf } from "react-icons/im";
 import visionImg from "../assets/vision.jpg";
 import missionImg from "../assets/mission.jpg";
+import Footer from "../components/Footer";
 
 const Overview = () => {
   const vision = [
@@ -40,7 +41,7 @@ const Overview = () => {
               />
             </div>
             <div
-              className={`card col-11 col-md-4 ${styles.card} ${styles.vision}`}
+              className={`card col-11 col-md-6 ${styles.card} ${styles.vision}`}
             >
               <div className="card-body">
                 <h4 className="card-title">OUR VISION</h4>
@@ -50,7 +51,7 @@ const Overview = () => {
           </div>
           <div className="row">
             <div
-              className={`card col-11 col-md-4 ${styles.card} ${styles.mission}`}
+              className={`card col-11 col-md-6 ${styles.card} ${styles.mission}`}
             >
               <div className="card-body">
                 <h4 className="card-title">OUR MISSION</h4>
@@ -147,6 +148,9 @@ const Overview = () => {
           </div>
         </section>
       </Parallax>
+      <section className="footer">
+        <Footer />
+      </section>
     </main>
   );
 };

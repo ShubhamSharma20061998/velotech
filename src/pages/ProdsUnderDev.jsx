@@ -2,6 +2,8 @@ import React from "react";
 import styles from "./ProdsUnderDev.module.css";
 import AC from "../assets/ac.gif";
 import cooler from "../assets/cooler.png";
+import { Accordion } from "react-bootstrap";
+
 const ProdsUnderDev = () => {
   const ACContent = [
     {
@@ -47,9 +49,16 @@ const ProdsUnderDev = () => {
           <img src={AC} alt="AC" className={styles.images} />
         </div>
         <div className="col-11 col-md-10">
-          {ACContent?.map(({ paragraph }) => {
-            return <p key={paragraph}>{paragraph}</p>;
-          })}
+          <Accordion>
+            <Accordion.Item eventKey="0">
+              <Accordion.Header>Know more...</Accordion.Header>
+              <Accordion.Body>
+                {ACContent?.map(({ paragraph }) => {
+                  return <p key={paragraph}>{paragraph}</p>;
+                })}
+              </Accordion.Body>
+            </Accordion.Item>
+          </Accordion>
         </div>
       </div>
       <h4 className={styles.h4}>
@@ -57,9 +66,16 @@ const ProdsUnderDev = () => {
       </h4>
       <div className={`row ${styles.prodsRow}`}>
         <div className="col-11 col-md-10">
-          {Cooler?.map(({ paragraph }) => {
-            return <p key={paragraph}>{paragraph}</p>;
-          })}
+          <Accordion>
+            <Accordion.Item eventKey="0">
+              <Accordion.Header>Know more...</Accordion.Header>
+              <Accordion.Body>
+                {Cooler?.map(({ paragraph }) => {
+                  return <p key={paragraph}>{paragraph}</p>;
+                })}
+              </Accordion.Body>
+            </Accordion.Item>
+          </Accordion>
         </div>
         <div className={`col-auto col-md-2 ${styles.image_container}`}>
           <img src={cooler} alt="Cooler" className={styles.images} />

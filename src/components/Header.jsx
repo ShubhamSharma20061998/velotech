@@ -1,8 +1,10 @@
 import React from "react";
 import styles from "./Header.module.css";
-import video from "../assets/banner_video.mp4";
+import video from "../assets/banner-video-1.mp4";
 import logo from "../assets/velotech_logo/velo.jpg";
-import { Container, Nav, Navbar } from "react-bootstrap";
+import Container from "react-bootstrap/Container";
+import Nav from "react-bootstrap/Nav";
+import Navbar from "react-bootstrap/Navbar";
 
 const Header = () => {
   const anchors = [
@@ -14,46 +16,28 @@ const Header = () => {
   ];
   return (
     <main className={styles.header_container}>
-      <nav className="navbar navbar-expand-lg">
-        <div className={`container ${styles.navbar_container}`}>
-          <a className="navbar-brand" href="#">
+      <Navbar expand="lg">
+        <Container className={styles.nav_container}>
+          <Navbar.Brand href="#">
             <img src={logo} alt="logo" />
-          </a>
-          <button
-            className="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarNavAltMarkup"
-            aria-controls="navbarNavAltMarkup"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
+          </Navbar.Brand>
+          <Navbar.Toggle aria-controls="basic-navbar-nav" />
+          <Navbar.Collapse
+            id="basic-navbar-nav"
+            className={styles.nav_navigator_container}
           >
-            {/* <AiOutlineMenu
-              className={`navbar-toggler-icon ${styles.menu_icon}`}
-            /> */}
-            <span className="navbar-toggler-icon"></span>
-          </button>
-          <div
-            className={`collapse navbar-collapse ${styles.navlist_container}`}
-            id="navbarNavAltMarkup"
-          >
-            <div className={`navbar-nav ${styles.nav_items}`}>
-              {anchors?.map(({ title, className, href }) => {
+            <Nav className={styles.nav_navigators}>
+              {anchors?.map(({ href, title }) => {
                 return (
-                  <a
-                    className={className}
-                    aria-current="page"
-                    href={href}
-                    key={href}
-                  >
+                  <Nav.Link href={href} key={href}>
                     {title}
-                  </a>
+                  </Nav.Link>
                 );
               })}
-            </div>
-          </div>
-        </div>
-      </nav>
+            </Nav>
+          </Navbar.Collapse>
+        </Container>
+      </Navbar>
       <h1 className={styles.banner_content}>
         WE DESIGN ENERGY EFFICIENT DEVICES
       </h1>
@@ -63,13 +47,3 @@ const Header = () => {
 };
 
 export default Header;
-<Navbar>
-  <Container>
-    <Navbar.Brand href="#home">Navbar</Navbar.Brand>
-    <Nav className="me-auto">
-      <Nav.Link href="#home">Home</Nav.Link>
-      <Nav.Link href="#features">Features</Nav.Link>
-      <Nav.Link href="#pricing">Pricing</Nav.Link>
-    </Nav>
-  </Container>
-</Navbar>;
