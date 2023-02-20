@@ -1,5 +1,5 @@
 import React from "react";
-import veloVideo from "../assets/t1.mp4";
+import veloVideo from "../assets/velotech_video.mp4";
 import styles from "./AboutUs.module.css";
 const AboutUs = () => {
   const textContent = [

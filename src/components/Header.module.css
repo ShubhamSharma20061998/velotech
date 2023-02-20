@@ -34,6 +34,9 @@
 .nav_navigators a {
   color: #fff;
 }
+.nav_navigators a:hover {
+  color: #e0e0e0;
+}
 .nav_navigators {
   align-items: flex-end;
   justify-content: center;
