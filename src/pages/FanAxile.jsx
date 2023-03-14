@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "./FanAxial.module.css";
-import fan from "../assets/fan.gif";
+import fan from "../assets/Ceiling-Fan-PNG-Photo.png";
 import Accordion from "react-bootstrap/Accordion";
 
 const FanAxile = () => {

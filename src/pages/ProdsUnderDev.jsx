@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "./ProdsUnderDev.module.css";
-import AC from "../assets/ac.gif";
-import cooler from "../assets/cooler.png";
+import AC from "../assets/Air-Conditioner-PNG-Photos.png";
+import cooler from "../assets/Evaporative-Cooler-PNG-Background-Image.png";
 import { Accordion } from "react-bootstrap";
 
 const ProdsUnderDev = () => {

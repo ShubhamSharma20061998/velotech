@@ -156,4 +156,3 @@ const Overview = () => {
 };
 
 export default Overview;
-// https://images.pexels.com/photos/821754/pexels-photo-821754.jpeg

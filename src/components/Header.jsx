@@ -1,10 +1,11 @@
 import React from "react";
 import styles from "./Header.module.css";
 import video from "../assets/banner-video-1.mp4";
-import logo from "../assets/velotech_logo/velo.jpg";
+import logo from "../assets/WhatsApp_Image_2023-01-27_at_13.19.18-removebg-preview.png";
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
+
 
 const Header = () => {
   const anchors = [
